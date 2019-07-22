@@ -1,0 +1,130 @@
+.team
+    background-color: #fbfbfb
+    padding-bottom: 177px
+    &-text-wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding-top: 141px
+    &__title
+        +semi-bold
+        font-size: 50px
+        color: $header
+        margin-bottom: 18px
+        transition: .5s
+        &:hover
+            transform: scale(1.1)
+            color: $start
+            .unique-start
+                color: $header
+    &__desc
+        +light
+        color: $header
+        font-size: 16px
+        margin-bottom: 127px
+    &-content-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+    &__item
+        text-align: center
+        position: relative
+        box-shadow: 0 0 49px rgba(20, 20, 21, 0.11)
+        margin-right: 10px
+        width: 360px
+        height: 445px
+        transition: .5s
+        &:last-children
+            margin: none
+        &:hover
+            .team__item-img
+                opacity: .1
+            .team__item-dynamic
+                opacity: 1
+            .team__item-button
+                opacity: 0
+        &-img
+            width: 364px
+            height: 449px
+        &-button
+            transition: .5s
+            border-radius: 2px
+            font-size: 30px
+            width: 262px
+            height: 95px
+            box-shadow: 1px 6px 16px rgba(20, 20, 21, 0.08)
+            margin-top: -300px
+            border: none
+            color: $header
+        &-name
+            font-size: 30px
+            +semi-bold
+            color: $header
+            display: block
+            margin-bottom: 5px
+        &-post
+            font-size: 17px
+            color: $start
+            +light
+            display: block
+            margin-bottom: 5px
+        &-dynamic
+            transition: .5s
+            position: absolute
+            bottom: 40%
+            width: 100%
+            opacity: 0
+        &-social
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+        &-social__item
+            cursor: pointer
+            transition: .6s
+            margin: 5%
+            width: 30px
+            padding-top: 5px
+            height: 30px
+            border: 1px solid rgba($start, .6)
+            border-radius: 50%
+            &:hover
+                box-shadow: 0 0 5px 5px $start
+@media (max-width: 1200px)
+    .team
+        &__item
+            width: 250px
+            height: 350px
+            &-img
+                width: 250px
+                height: 350px
+            &-button
+                width: 162px
+                height: 55px
+                font-size: 15px
+@media (max-width: 768px)
+    .team
+        &__item
+            width: 180px
+            height: 280px
+            &-img
+                width: 180px
+                height: 280px
+            &-button
+                width: 100px
+                height: 40px
+                font-size: 10px
+@media (max-width: 425px)
+    .team
+        padding-bottom: 50px
+        &__title
+            font-size: 20px
+        &__desc
+            font-size: 12px
+            margin-bottom: 50px
+        &-content-wrapper
+            flex-direction: column
+        &__item
+            margin-bottom: 40px

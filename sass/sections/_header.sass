@@ -1,0 +1,96 @@
+.header
+    background-color: $bg-main
+    min-height: 100px
+    &__nav
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 99
+        &-wrapper
+            padding: 10px
+            display: flex
+            justify-content: space-between
+            align-items: center
+    &__logo
+        border: 4px solid $header
+        border-radius: 2px
+        padding: 15px 20px
+        float: left
+        +semi-bold
+        font-size: 20px
+        color: $main
+        transition: .5s
+        &:hover
+            border: 2px solid $start
+            transform: scale(1.1)
+            color: $start
+            .unique-start
+                color: $header
+    &__menu
+        transition: .5s
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &:hover
+            transform: scale(1.1)
+        &-item
+            border-radius: 2px
+            width: 34px
+            height: 4px
+            background-color: $header
+            margin: 4px
+    &__links
+        margin-top: 100px
+        background-color: rgba($start, .95)
+        padding: 10px
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        transition: all 1s
+        opacity: 1
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 50px
+        z-index: 99
+        opacity: 1
+        &-item
+            +light
+            font-size: 15px
+            transition: .5s
+            &:hover
+                transform: scale(1.2)
+        &-anchor
+            color: #ffffff
+            text-decoration: none
+        &-is-unvisible
+            opacity: 0
+            height: 0
+            z-index: -1
+
+@media (max-width: 768px)
+    .header
+        height: 50px
+        &__logo
+            font-size: 15px
+        &__links
+            height: 200px
+            flex-direction: column
+            &-item
+                padding-bottom: 10px
+
+@media (max-width: 425px)
+    .header
+        &__logo
+            font-size: 15px
+        &__nav
+            &-wrapper
+                justify-content: center
+        &__logo
+            display: none
+        &__links
+            margin-top: 100px

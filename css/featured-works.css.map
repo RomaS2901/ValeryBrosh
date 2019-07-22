@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,4BAAc,CAAC;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAAG",
+    "sources": [
+        "../sass/sections/featured-works.sass"
+    ],
+    "names": [],
+    "file": "featured-works.css"
+}

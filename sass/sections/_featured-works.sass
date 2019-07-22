@@ -1,0 +1,54 @@
+.featured-works
+    background-color: $bg-main
+    &-text-wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        flex-wrap: wrap
+    &__title
+        font-size: 50px
+        margin-top: 128px
+        +semi-bold
+        color: $header
+        transition: .5s
+        &:hover
+            transform: scale(1.1)
+            color: $start
+            .unique-start
+                color: $header
+    &__desc
+        font-size: 16px
+        color: $header
+        +light
+        margin-bottom: 113px
+    &__img-wrapper
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+    &__img
+        flex-basis: 30%
+        transition: .5s
+        margin: 5px
+        width: 360px
+        height: 358px
+        box-shadow: 2px 11px 20px rgba(20, 20, 21, 0.4)
+        &:hover
+            background-color: rgba(black, .5)
+            transform: scale(1.05)
+
+@media (max-width: 425px)
+    .featured-works
+        &__title
+            font-size: 25px
+        &__desc
+            font-size: 12px
+            margin-bottom: 50px
+
+@media (max-width: 320px)
+    .featured-works
+            &__img
+                width: 320px
+                height: 318px
