@@ -2,42 +2,8 @@
     color: $start
 .unique-start-revert
     color: $header
-.form
-    display: flex
-    flex-direction: column
-    width: 75%
-    margin: auto
-    &__name,
-    &__mail,
-    &__msg
-        transition: .5s
-        +light
-        border: none
-        border-bottom: 1px solid $header
-        margin-bottom: 20px
-        padding-bottom: 5px
-        resize: none
-        &:focus
-            border-bottom: 4px solid $start
-            transform: scale(1.05)
-            outline: none
-            box-shadow: 0 0 10px -10px $start
-    &__submit
-        background-color: $secondary
-        padding: 20px 66px
-        border: 1px solid rgba(1, 2, 2, 0.07)
-        box-shadow: 2px 11px 20px rgba(20, 20, 21, 0.08)
-        border-radius: 27px
-        color: #ffffff
-        +light
-        font-size: 16px
-        margin-bottom: 20px
-        transition: .5s
-        &:hover
-            transform: scale(1.1)
-            box-shadow: 0 0 20px 5px rgba($start, .5)
-        &__img
-            padding: 0 10px
+.fab
+    color: $start
 
 @media (max-width: 1024px)
     .form
@@ -50,31 +16,3 @@
             padding: 10px 33px
             &__img
                 display: none
-
-@media (max-width: 425px)
-    .form
-        width: 90%
-        &__name,
-        &__mail,
-        &__msg
-            margin-bottom: 1px
-            height: 50px
-            padding-bottom: 0
-            margin-bottom: 0
-        &__submit
-            font-size: 5px
-            padding: 5px 15px
-
-@media (max-width: 320px)
-    .form
-        &__name,
-        &__mail,
-        &__msg
-            margin-bottom: 1px
-            height: 50px
-            padding-bottom: 0
-            margin-bottom: 0
-            font-size: 5px
-        &__submit
-            font-size: 5px
-            padding: 5px 15px

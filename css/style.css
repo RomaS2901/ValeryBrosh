@@ -22,62 +22,8 @@
   color: rgba(23, 15, 28, 0.6);
 }
 
-.form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 75%;
-  margin: auto;
-}
-
-.form__name, .form__mail, .form__msg {
-  -webkit-transition: .5s;
-  transition: .5s;
-  font-family: 'Open Sans Light';
-  border: none;
-  border-bottom: 1px solid rgba(23, 15, 28, 0.6);
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-  resize: none;
-}
-
-.form__name:focus, .form__mail:focus, .form__msg:focus {
-  border-bottom: 4px solid #fc6744;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  outline: none;
-  -webkit-box-shadow: 0 0 10px -10px #fc6744;
-          box-shadow: 0 0 10px -10px #fc6744;
-}
-
-.form__submit {
-  background-color: #ff5c36;
-  padding: 20px 66px;
-  border: 1px solid rgba(1, 2, 2, 0.07);
-  -webkit-box-shadow: 2px 11px 20px rgba(20, 20, 21, 0.08);
-          box-shadow: 2px 11px 20px rgba(20, 20, 21, 0.08);
-  border-radius: 27px;
-  color: #ffffff;
-  font-family: 'Open Sans Light';
-  font-size: 16px;
-  margin-bottom: 20px;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.form__submit:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: 0 0 20px 5px rgba(252, 103, 68, 0.5);
-          box-shadow: 0 0 20px 5px rgba(252, 103, 68, 0.5);
-}
-
-.form__submit__img {
-  padding: 0 10px;
+.fab {
+  color: #fc6744;
 }
 
 @media (max-width: 1024px) {
@@ -90,36 +36,6 @@
   }
   .form__submit__img {
     display: none;
-  }
-}
-
-@media (max-width: 425px) {
-  .form {
-    width: 90%;
-  }
-  .form__name, .form__mail, .form__msg {
-    margin-bottom: 1px;
-    height: 50px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-  .form__submit {
-    font-size: 5px;
-    padding: 5px 15px;
-  }
-}
-
-@media (max-width: 320px) {
-  .form__name, .form__mail, .form__msg {
-    margin-bottom: 1px;
-    height: 50px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    font-size: 5px;
-  }
-  .form__submit {
-    font-size: 5px;
-    padding: 5px 15px;
   }
 }
 
@@ -301,6 +217,10 @@
 }
 
 @media (max-width: 425px) {
+  .header {
+    min-height: 50px;
+    height: 20px;
+  }
   .header__logo {
     font-size: 15px;
   }
@@ -313,7 +233,7 @@
     display: none;
   }
   .header__links {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 
@@ -341,19 +261,33 @@
 }
 
 .hero__text-wrapper {
+  height: 400px;
   width: 50%;
   text-align: center;
   margin: auto;
-  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__title {
   font-family: 'Open Sans Semibold';
-  font-size: 50px;
+  font-size: 60px;
   color: rgba(23, 15, 28, 0.6);
   margin-bottom: 10px;
   -webkit-transition: .5s;
   transition: .5s;
+  white-space: nowrap;
 }
 
 .hero__title:hover {
@@ -371,6 +305,7 @@
   color: rgba(23, 15, 28, 0.6);
   -webkit-transition: .5s;
   transition: .5s;
+  font-size: 20px;
 }
 
 .hero__desc:hover {
@@ -434,12 +369,18 @@
 }
 
 @media (max-width: 425px) {
+  .section__hero {
+    margin-top: 50px;
+  }
+  .hero {
+    margin-top: 30px;
+  }
   .hero__title {
     white-space: nowrap;
-    font-size: 20px;
+    font-size: 30px;
   }
   .hero__desc {
-    font-size: 7px;
+    font-size: 14px;
   }
   .hero__msg-form__title {
     font-size: 7px;
@@ -452,10 +393,10 @@
 @media (max-width: 320px) {
   .hero__title {
     white-space: wrap;
-    font-size: 10px;
+    font-size: 20px;
   }
   .hero__desc {
-    font-size: 5px;
+    font-size: 12px;
   }
   .hero__msg-form__title {
     font-size: 5px;
@@ -1261,6 +1202,10 @@
           box-shadow: 0 0 10px 10px rgba(252, 103, 68, 0.5);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.footer-social__item:hover .fab {
+  color: #626262;
 }
 
 .footer__date {

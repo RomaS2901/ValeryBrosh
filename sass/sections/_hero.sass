@@ -19,16 +19,21 @@
             z-index: -1
 .hero
     &__text-wrapper
+        height: 400px
         width: 50%
         text-align: center
         margin: auto
-        margin-bottom: 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
     &__title
         +semi-bold
-        font-size: 50px
+        font-size: 60px
         color: $header
         margin-bottom: 10px
         transition: .5s
+        white-space: nowrap
         &:hover
             transform: scale(1.1)
             color: $start
@@ -38,6 +43,7 @@
         +light
         color: $header
         transition: .5s
+        font-size: 20px
         &:hover
             transform: scale(1.1)
             color: $start
@@ -78,12 +84,15 @@
             width: 100%
 
 @media (max-width: 425px)
+    .section__hero
+        margin-top: 50px
     .hero
+        margin-top: 30px
         &__title
             white-space: nowrap
-            font-size: 20px
+            font-size: 30px
         &__desc
-            font-size: 7px
+            font-size: 14px
         &__msg-form__title
             font-size: 7px
         &__msg-form-wrapper
@@ -93,9 +102,9 @@
     .hero
         &__title
             white-space: wrap
-            font-size: 10px
+            font-size: 20px
         &__desc
-            font-size: 5px
+            font-size: 12px
         &__msg-form__title
             font-size: 5px
             padding: 0

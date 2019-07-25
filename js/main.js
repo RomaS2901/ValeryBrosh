@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let mainAction = document.getElementById('header-menu'),
         myContactsLinkItem = document.getElementById('contacts__link-item'),
         myTeamLinkItem = document.getElementById('team__link-item'),
+        footer = document.getElementById('footer'),
         contextMenu = document.getElementById('header-list');
-    
+
     // show or hide context menu list
     mainAction.addEventListener('click', function(){
         this.style.transform = 'scale(' + 2 + ')';
@@ -21,24 +22,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 500)
     });
-
-    // on click scroll window to footer with contact information
-    myContactsLinkItem.addEventListener('click', function(){
-        let footerOffset = document.getElementsByClassName('footer')[0].getBoundingClientRect();
-        window.scrollTo({
-            top: footerOffset.top,
-            left: footerOffset.left,
-            behavior: 'smooth'
-        })
-    });
-
-    // on click scroll window to team section
-    myTeamLinkItem.addEventListener('click', function(){
-        let teamSectionOffset = document.getElementsByClassName('team-content-wrapper')[0].getBoundingClientRect();
-        window.scrollTo({
-            top: teamSectionOffset.top,
-            left: teamSectionOffset.left,
-            behavior: 'smooth'
-        })
-    })
 })
